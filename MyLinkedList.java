@@ -56,6 +56,8 @@ public class MyLinkedList<E> implements List<E> {
         }else{
             current.next.prev = current.prev;
         }
+        size--;
+        return current.element;
 
         }
 
