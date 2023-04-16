@@ -1,10 +1,20 @@
 import java.util. *;
+
+/**
+ *
+ * @param <E>
+ */
 public abstract class MyArrayList<E> implements List<E> {
     private Object[] elements;
 
+    /**
+     *
+     * @param initialCapasity constructs a new MyArrayList object with the specified initial capacity;
+     */
     public MyArrayList(int initialCapasity) {
         this.elements = new Object[initialCapasity];
     }
+
     private int size;
     private void ensureCapacity(int minCapacity) {
         int oldCapacity = elements.length;
@@ -15,16 +25,34 @@ public abstract class MyArrayList<E> implements List<E> {
             elements = Arrays.copyOf(elements, newCapacity);
         }
     }
+
+    /**
+     *
+     * @param element element whose presence in this collection is to be ensured
+     * @return
+     */
     public boolean add(E element){
         ensureCapacity(size+1);
         elements[size++] = element;
         return true;
     }
+
+    /**
+     *
+     * @param index index of the element to return
+     * @return
+     */
     public E get(int index){
         if (index < 0 || index >= size )
             throw new IndexOutOfBoundsException();
         return (E) elements[index];
     }
+
+    /**
+     *
+     * @param index the index of the element to be removed
+     * @return
+     */
     public E remove(int index){
         if (index < 0 || index >= size)
             throw new IndexOutOfBoundsException();
@@ -35,6 +63,11 @@ public abstract class MyArrayList<E> implements List<E> {
         elements[--size] = null;
         return oldValue;
     }
+
+    /**
+     *
+     * @return
+     */
     public int size() {
         return size;
     }
