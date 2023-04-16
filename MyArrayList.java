@@ -30,7 +30,13 @@ public abstract class MyArrayList<E> implements List<E> {
             throw new IndexOutOfBoundsException();
         E oldValue = (E) elements[index];
         int numMoved = size - index - 1;
-            
+        if ( numMoved > 0)
+            System.arraycopy(elements, index+1, elements, index, numMoved);
+        elements[--size] = null;
+        return oldValue;
+    }
+    public int size() {
+        return size;
     }
 
 }
