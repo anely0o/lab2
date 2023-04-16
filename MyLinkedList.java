@@ -54,7 +54,7 @@ public class MyLinkedList<E> implements List<E> {
         if(current.next == null){
             tail = current.prev;
         }else{
-            
+            current.next.prev = current.prev;
         }
 
         }
