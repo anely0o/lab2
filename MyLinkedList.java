@@ -35,12 +35,15 @@ public class MyLinkedList<E> implements List<E> {
             for (int i = 0; i < index; i++) {
                 current = current.next;
             }
-        } else{
+        } else if (){
             current = tail;
             for( int i = 0; i< index; i++){
-                current = current.next
+                current = current.next;
             }
-        } else{
+        } else {
+            current = tail ;
+            for( int i size )
+        }
 
         }
 
