@@ -52,7 +52,7 @@ public abstract class MyArrayList<E> implements List<E> {
     /**
      *
      * @param index the index of the element to be removed
-     * @return
+     * @returns it
      */
     public E remove(int index){
         if (index < 0 || index >= size)
@@ -67,7 +67,7 @@ public abstract class MyArrayList<E> implements List<E> {
 
     /**
      *
-     * @return
+     * @return the number of elements it the list
      */
     public int size() {
         return size;
