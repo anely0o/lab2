@@ -90,7 +90,7 @@ public class MyLinkedList<E> implements List<E> {
 
     /**
      *
-     * @return 
+     * @return adds three integers to the list, retrieves and prints the second element, removes the second element, and then prints the size of the list
      */
     public int size() {
         return size;
