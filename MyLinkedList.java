@@ -67,7 +67,11 @@ public class MyLinkedList<E> implements List<E> {
     public int size() {
         return size;
         }
-        
+    public static void main(String[] args) {
+        List<Integer> myList = new MyLinkedList<>();
+        myList.add(1);
+        myList.add(2);
+        myList.add(3);
 
 
 }
