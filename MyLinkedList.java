@@ -42,8 +42,11 @@ public class MyLinkedList<E> implements List<E> {
             }
         } else {
             current = tail ;
-            for( int i size )
+            for( int i = size - 1; i > index; i-- ){
+                current = current.prev;
+            }
         }
+        if()
 
         }
 
