@@ -41,7 +41,7 @@ public abstract class MyArrayList<E> implements List<E> {
     /**
      *
      * @param index index of the element to return
-     * @return
+     * @returns hte element at hte specified index from the list
      */
     public E get(int index){
         if (index < 0 || index >= size )
