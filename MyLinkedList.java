@@ -48,7 +48,10 @@ public class MyLinkedList<E> implements List<E> {
         }
         if(current.prev == null){
             head = current.next;
+        }else{
+            current.prev.next  = current.next;
         }
+        if()
 
         }
 
