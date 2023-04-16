@@ -72,6 +72,11 @@ public class MyLinkedList<E> implements List<E> {
         myList.add(1);
         myList.add(2);
         myList.add(3);
+        System.out.println(myList.get(1)); // Output: 2
+        myList.remove(1);
+        System.out.println(myList.get(1)); // Output: 3
+        System.out.println(myList.size()); // Output: 2
+    }
 
 
 }
