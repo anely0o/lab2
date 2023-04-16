@@ -24,8 +24,8 @@ public class MyLinkedList<E> implements List<E> {
         }
         size++;
         return true;
-
     }
+    
 
 
 }
