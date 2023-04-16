@@ -12,9 +12,9 @@ public class MyLinkedList<E> implements List<E> {
 
         /**
          *
-         * @param element
-         * @param next
-         * @param prev
+         * @param element stores the element contained in the node
+         * @param next  stores a reference to the next node in the list
+         * @param prev stores a reference to the previous node in the list
          */
 
         public Node(E element, Node next, Node prev) {
