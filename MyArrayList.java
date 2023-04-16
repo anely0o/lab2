@@ -29,7 +29,8 @@ public abstract class MyArrayList<E> implements List<E> {
     /**
      *
      * @param element element whose presence in this collection is to be ensured
-     * @return
+     *                adds the specified element to the end of the list
+     * @returns true
      */
     public boolean add(E element){
         ensureCapacity(size+1);
