@@ -25,6 +25,12 @@ public abstract class MyArrayList<E> implements List<E> {
             throw new IndexOutOfBoundsException();
         return (E) elements[index];
     }
-    
+    public E remove(int index){
+        if (index < 0 || index >= size)
+            throw new IndexOutOfBoundsException();
+        E oldValue = (E) elements[index];
+        int numMoved = size - index - 1;
+            
+    }
 
 }
