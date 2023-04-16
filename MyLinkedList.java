@@ -1,9 +1,21 @@
 import java.util.*;
+
+/**
+ *
+ * @param <E> used to specify the type of elements to be stored in the linked list
+ */
 public class MyLinkedList<E> implements List<E> {
     private class Node {
         E element;
         Node next;
         Node prev;
+
+        /**
+         *
+         * @param element
+         * @param next
+         * @param prev
+         */
 
         public Node(E element, Node next, Node prev) {
             this.element = element;
@@ -17,6 +29,12 @@ public class MyLinkedList<E> implements List<E> {
     private Node tail;
     private int size;
 
+    /**
+     *
+     * @param element element whose presence in this collection is to be ensured
+     * @return
+     */
+
     public boolean add(E element) {
         Node newNode = new Node(element, null, tail);
         if (tail == null) {
@@ -29,6 +47,11 @@ public class MyLinkedList<E> implements List<E> {
         return true;
     }
 
+    /**
+     *
+     * @param index index of the element to return
+     * @return
+     */
     public E get(int index) {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException();
@@ -64,6 +87,11 @@ public class MyLinkedList<E> implements List<E> {
         return current.element;
 
     }
+
+    /**
+     *
+     * @return
+     */
     public int size() {
         return size;
         }
