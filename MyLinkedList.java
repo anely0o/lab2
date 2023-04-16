@@ -1,30 +1,34 @@
 import java.util.*;
 public class MyLinkedList<E> implements List<E> {
-    private class Node{
+    private class Node {
         E element;
         Node next;
         Node prev;
-        public Node(E element, Node next, Node prev){
+
+        public Node(E element, Node next, Node prev) {
             this.element = element;
             this.next = next;
             this.prev = prev;
         }
 
     }
+
     private Node head;
     private Node tail;
     private int size;
-    public boolean add(E element){
+
+    public boolean add(E element) {
         Node newNode = new Node(element, null, tail);
-        if( tail == null){
+        if (tail == null) {
             head = tail = newNode;
-        }else {
+        } else {
             tail.next = newNode;
             boolean b = tail == newNode;
         }
         size++;
         return true;
     }
+
     public E get(int index) {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException();
@@ -35,31 +39,35 @@ public class MyLinkedList<E> implements List<E> {
             for (int i = 0; i < index; i++) {
                 current = current.next;
             }
-        } else if (){
+        } else if () {
             current = tail;
-            for( int i = 0; i< index; i++){
+            for (int i = 0; i < index; i++) {
                 current = current.next;
             }
         } else {
-            current = tail ;
-            for( int i = size - 1; i > index; i-- ){
+            current = tail;
+            for (int i = size - 1; i > index; i--) {
                 current = current.prev;
             }
         }
-        if(current.prev == null){
+        if (current.prev == null) {
             head = current.next;
-        }else{
-            current.prev.next  = current.next;
+        } else {
+            current.prev.next = current.next;
         }
-        if(current.next == null){
+        if (current.next == null) {
             tail = current.prev;
-        }else{
+        } else {
             current.next.prev = current.prev;
         }
         size--;
         return current.element;
 
+    }
+    public int size() {
+        return size;
         }
+        
 
 
 }
