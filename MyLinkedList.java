@@ -32,7 +32,7 @@ public class MyLinkedList<E> implements List<E> {
     /**
      *
      * @param element element whose presence in this collection is to be ensured
-     * @return
+     * @return its element
      */
 
     public boolean add(E element) {
@@ -90,7 +90,7 @@ public class MyLinkedList<E> implements List<E> {
 
     /**
      *
-     * @return
+     * @return 
      */
     public int size() {
         return size;
